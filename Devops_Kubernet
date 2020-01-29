@@ -345,3 +345,34 @@ spec:
         cpu: "400m"
         
         kubectl get resourcequota mem-cpu-demo --namespace=quota-mem-cpu-example --output=yaml
+=
+
+deployment.yml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+   spec:
+     replicas:3(deploy 3 pods)
+     selector:
+       matchLabels:
+         app: nginx
+     template:(as we r creating replicas needs to create template, will deploy on same label and same specification)
+       metadata:
+         Labels:
+           app: nginx
+       spec:
+         containers:
+          - name: nginx
+            image: nginx:1.7.9
+            ports:
+            - containerPort: 80
+            
+            kubectl get deployment
+            kubectl rollout status deployment.v1.apps/nginx-deployment
+            kubectl get rs
+            
+            https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
