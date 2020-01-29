@@ -274,3 +274,74 @@ EOF
    23  cat /etc/cloud/cloud.cfg
    24  history
 
+ mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+kubectl get nodes
+kubectl get pods --all-namespaces
+kubectl get namespaces
+
+vi dev.yml
+kubectl create -f dev.yml
+
+apiVersion: v1
+kind: Namespaces
+metadata:
+   name: development
+   
+  =================
+  
+   apiVersion: v1
+kind: Pod
+meatadata:
+   name: nginx-deployment
+   labels:
+     name: nginx
+spec:
+   containers:
+   - name: nginx
+     image: nginx:latest
+     ports:
+     - containerPorts: 80 
+     
+     kubectl apply -f pod.yaml
+     kubectl get pods
+     kubectl describe pod nginx-deployment
+      kubectl create ns quota-mem-cpu-example
+=============================      
+      
+      apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: mem-cpu-demo
+spec:
+  hard:
+    requests.cpu: "1"
+    requests.memory: 1G
+    limit.cpu: "2"
+    limit.memory: 2G
+    
+    kubectl apply -f quota.yml --namespace=quota-mem-cpu-example
+    kubectl get resourcequota mem-cpu-demo --namespace=quota-mem-cpu-example --output=yaml
+    
+    
+    ===
+    
+    apiVersion: v1
+kind: Pod
+metadata:
+  name: quota-mem-cpu-demo
+spec:
+  containers:
+  - name: quota-mem-cpu-demo-ctr
+    image: nginx
+    resources:
+      limits:
+        memory: "800Mi"
+        cpu: "800m"
+      requests:
+        memory: "600Mi"
+        cpu: "400m"
+        
+        kubectl get resourcequota mem-cpu-demo --namespace=quota-mem-cpu-example --output=yaml
