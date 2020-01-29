@@ -376,3 +376,4 @@ metadata:
             kubectl get rs
             
             https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+            kubeadm token list
