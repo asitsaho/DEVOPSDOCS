@@ -1,0 +1,235 @@
+
+
+ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+https://docs.docker.com/install/linux/docker-ce/centos/
+
+1  ls
+    2  ls -lrth
+    3  docker compose ls
+    4  docker compose ps
+    5  docker-compose ps
+    6  docker network ls
+    7  ifconfig
+    8  docker images
+    9  docker ps
+   10  docker network ls
+   11  docker volume ls
+   12  ls -la /var/lib/docker/volumes/
+   13  cat root_db_data
+   14  cd root_db_data
+   15  ls
+   16  docker ps
+   17  docker exec -it c7d62ae3fe05 /bin/bash
+   18  docker ps
+   19  docker exec -it 466f6183527a /bin/bash
+   20  exit
+   21  docker -v
+   22  apt-get install docker.io
+   23  docker -v
+   24  docker container ps
+   25  docker container ps -a
+   26  docker ls -a
+   27  docker container ps -a
+   28  docker -v
+   29  docker ps
+   30  docker images
+   31  docker info
+   32  docker images
+   33  docker image prune hello-world
+   34  docker image prune fce289e99eb9
+   35  docker image prune 
+   36  dcoker image
+   37  dcoker images
+   38  docker image
+   39  docker image ls
+   40  docker image prune
+   41  docker ps -a
+   42  docker kill f8ee8aa4b1aa
+   43  docker images
+   44  docker imahe rmi fce289e99eb9
+   45  docker image rmi fce289e99eb9
+   46  docker image rm -f fce289e99eb9
+   47  docker images
+   48  docker ps -a
+   49  docker rm f8ee8aa4b1aa
+   50  docker ps -a
+   51  docker run -i -t hello-world
+   52  docker ps -a
+   53  docker ps
+   54  docker images
+   55  docker ps
+   56  docker ps -a
+   57  docker image -h
+   58  docker image inspect
+   59  docker image fce289e99eb9 inspect
+   60  docker image inspect fce289e99eb9
+   61  ls
+   62  ll
+   63  cat .profile
+   64  vi dockerfile
+   65  nano dockerfile
+   66  ls
+   67  cat dockerfile 
+   68  vi print_hello.py
+   69  nano print_hello.py
+   70  ls
+   71  cat print_hello.py
+   72  docker build -t python_asit_27JAN .
+   73  docker build -t python_asit_27012020 .
+   74  docker ps
+   75  docker ps -a
+   76  docker images
+   77  ls
+   78  cat dockerfile
+   79  cat print_hello.py
+   80  cd /var/lib/
+   81  ls
+   82  cd docker
+   83  ls -lrth
+   84  cd ../ucf/
+   85  ls
+   86  cd 
+   87  docker image inspect cf48e8a080b1
+   88  docker history
+   89  docker history cf48e8a080b1
+   90  docker image inspect cf48e8a080b1
+   91  docker network ls
+   92  cd /var/lib/docker/overlay2
+   93  ls -lrth
+   94  cd ../
+   95  ls -lrth
+   96  cd swarm/
+   97  ls
+   98  ls -lrth
+   99  cd 
+  100  docker network inspect cf48e8a080b1
+  101  docker network ls
+  102  docker network inspect 37a54d1f0eae
+  103  ifconfig
+  104  cd /var/lib/docker
+  105  ls -lrht
+  106  cd containers/
+  107  ls
+  108  ls -lrth
+  109  cd ..
+  110  ls
+  111  cd volumes/
+  112  ls
+  113  cat metadata.db 
+  114  PuTTYPuTTYPuTTY:
+  115  ls
+  116  cd
+  117  ls
+  118  ls -la /var/lib/docker/volumes/
+  119  ls -lrth
+  120  docker volume ls
+  121  docker volume create my_vol
+  122  ls
+  123  cd /var/lib/docker/volumes/
+  124  ls
+  125  ls -larht
+  126  docker volumne inspect my_vol
+  127  docker volume inspect my_vol
+  128  cd
+  129  docker images
+  130  docker run -i -t python_asit_27012020
+  131  docker history python_asit_27012020
+  132  ls
+  133  cat print_hello.py 
+  134  cat dockerfile 
+  135  docker-compose 
+  136  curl -L "https://github.com/docker/compose/release/download/1/24/1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  137  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  138  echo $PATH
+  139  docker-compose
+  140  ls -la /usr/bin/docker-compose
+  141  chmod 755 /usr/local/bin/docker-compose
+  142  docker-compose
+  143  ls -la /usr/local/bin/docker-compose
+  144  curl -L "https://github.com/docker/compose/releases/download/1/24/1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  145  docker-compose
+  146  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  147  docker-compose -v
+  148  chmod 755 /usr/local/bin/docker-compose
+  149  docker-compose -v
+  150  curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  151  chmod 755 /usr/local/bin/docker-compose
+  152  docker-compose -v
+  153  docker-compose
+  154  docker-compose top
+  155  ls -la /usr/local/bin
+  156  pwd
+  157  docker volume ls
+  158  docker volume rm my_vol
+  159  docker volume ls
+  160  docker network ls
+  161  docker images
+  162  docker-compose -h
+  163  docker-compose ps
+  164  vi docker-compose.yaml
+  165  docker-compose ps
+  166  docker-compose up
+  167  docker images
+  168  docker ps
+  169  docker exec -it c7d62ae3fe05 /bin/bash
+  170  docker network ls
+  171  docker network inspect ca92f5bfb514
+  172  docker ps
+  173  docker volume ls
+  174  docker volume inspect root_db_data
+  175  cd /var/lib/docker/volumes/root_db_data/_data
+  176  ls -lrth
+  177  cd mysql
+  178  ls
+  179  ls -lrth
+  180  cd /var/lib/mysql
+  181  cd
+  182  docker network ls
+  183  docker network inspect e44f1e373cef
+  184  docker-compose down -v
+  185  ls -la /var/lib/docker/volumes/
+  186  docker network ls
+  187  docker-compose --help
+  188  docker-compose config
+  189  ls
+  190  docker image ls
+  191  docker run -d --name=Asit -p 80:80 nginx
+  192  docker top Asit
+  193  docker ps
+  194  ps aux
+  195  ps aux | grep nginx
+  196  docker top Asit
+  197  docker ps
+  198  docker container ls
+  199  docker ps
+  200  ls -la
+  201  free -h
+  202  docker search httpd
+  203  docker ps
+  204  docker stop 7b
+  205  docker ps
+  206  docker container prune
+  207  docker container ps
+  208  docker container ps -a
+  209  docker commit
+  210  docker commit -h
+  211  docker pull karthick1808/karthickserver:latest
+  212  docker login
+  213  docker pull karthick1808/karthickserver:latest
+  214  docker pull karthick1808/karthicksever
+  215  docker push asitsaho/karthicksever
+  216  docker image ls
+  217  docker push karthick1808/karthicksever
+  218  docker push karthick1808/karthicksever:latest
+  219  docker commit 2d asitsaho/asit:latest
+  220  docker run -it karthick1808/karthicksever
+  221  docker images
+  222  docker run -it karthick1808/karthicksever
+  223  docker run -itd -p 80/:80 karthick1808/karthicksever
+  224  docker run -itd -p 80:80 karthick1808/karthicksever
+  225  docker ps
+  226  docker commit 3f asitsaho/asit:latest
+  227  docker images
+  228  docker push asitsaho/asit:latest
+
+https://github.com/karthick1808/karthickdocker/blob/master/Dockerfile
